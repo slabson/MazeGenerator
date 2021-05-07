@@ -38,11 +38,9 @@ namespace MazeGenerator
         //Go in a random direction where the next cell is unvisited until there are unvisited neighbours for the current cell
         private void Walk()
         {
-            Direction dir = new Direction();
-
             while (ExistUnvisitedNeighbours(cellCoords.x, cellCoords.y))
             {
-                Directions direction = dir.GetRandomAndNew();
+                Directions direction = Direction.GetRandom();
 
                 switch (direction)
                 {
